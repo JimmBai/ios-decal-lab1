@@ -33,9 +33,9 @@ class FundsViewController: UIViewController {
             // NOTE: YOU MAY NOT USE INTEGER VALUES HERE; INSTEAD, SEARCH FOR A PREDEFINED CONSTANT WITHIN THE PROJECT THAT YOU CAN REFERENCE IN PLACE OF NUMERICAL VALUES.
         
             
-            // amountLeft +=
+            //amountLeft +=
             
-            if Int(amountLeft) == 1000000 {
+            if Int(amountLeft) == 1000000 - recovery9 {
                 self.success()
             } else {
                 self.fail()

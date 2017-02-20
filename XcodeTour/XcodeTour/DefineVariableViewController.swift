@@ -3,6 +3,7 @@ import UIKit
 class DefineVariableViewController: UIViewController {
 
     // Define any instance variables here
+    var storedFormattedTextArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class DefineVariableViewController: UIViewController {
         let formattedText = (data3?.capitalized)!
         let formattedTextArray = [formattedText]
         
+        storedFormattedTextArray = formattedTextArray
         // TODO: Transfer the values in formattedTextArray to the textToDisplay property in our prepare for segue function
         // Hint: How would you store a value if you wanted to access it across different functions?
         
@@ -37,7 +39,7 @@ class DefineVariableViewController: UIViewController {
         if let destinationVC = segue.destination as? NiceWorkViewController {
             
             // TODO: Assign the destinationVC's textToDisplay property to what was stored in formattedTextArray above
-            destinationVC.textToDisplay = [] // Change this!
+            destinationVC.textToDisplay = self.storedFormattedTextArray // Change this!
         }
     }
 }
